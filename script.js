@@ -33,7 +33,9 @@ btn.addEventListener("click", () => {
             ${datas.meanings[0].definitions[0].example || ''}
             </p>`;
             audio.setAttribute("src", datas.phonetics[0].audio);
-    });
+    }).catch(()=>{
+        resultElem.innerHTML = `<h4 class = "error">This Word Not Exist</h4>`
+    })
 
 });
 
